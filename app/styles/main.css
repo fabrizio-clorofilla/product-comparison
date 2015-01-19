@@ -1,0 +1,90 @@
+/* Space out content a bit */
+body {
+	margin: 0px;
+	font-family: Verdana;
+	font-size: 11px;
+}
+
+.comparison-container {
+	width: 100%;
+}
+
+.comparison-container h1, .comparison-container h3 {
+	/*margin-left: 40px;
+	margin-right: 40px;
+	margin-bottom: 0px;*/
+	margin: 0px 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.comparison-container h3 {
+	padding-bottom: 10px;
+	border-top: 1px solid #EEEEEE;
+}
+
+.comparison-container .comparison-header {
+	padding-left: 40px;
+	padding-right: 40px;
+	overflow: auto;
+}
+
+.comparison-container .comparison-header .comparison-dropdown,
+.comparison-container .comparison-body .comparison-specs {
+	float: left;
+	display: inline-block;
+	width: 32%;
+}
+
+.comparison-container .comparison-header .comparison-dropdown:last-child {
+	float: right;
+}
+
+.comparison-container ul {
+	padding: 0px;
+	margin: 16px 0px 16px 0px;
+	overflow: auto;
+}
+
+.comparison-container ul li {
+	display: inline;
+	padding-right: 2%;
+}
+
+.comparison-container ul li:last-child {
+	float: right;
+	padding-right: 0;
+}
+
+.comparison-container .comparison-dropdown select {
+	width: 100%;
+}
+
+.comparison-container .comparison-body {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.comparison-item-name {
+	display: block;
+}
+
+/*.comparison-specs.hidden {
+	float: left;
+	display: none;
+	width: 33%;
+}*/
+
+/* Customize container */
+@media (min-width: 768px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+ 
+
+}

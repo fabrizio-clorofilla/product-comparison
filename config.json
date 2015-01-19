@@ -1,0 +1,62 @@
+{
+  "structure": {
+    "type": "feature",
+    "app": {
+      "path": "app",
+      "source": {
+        "path": "src",
+        "common": {
+          "path": "common"
+        },
+        "feature": {
+          "path": "{{feature}}",
+          "assets": {
+            "path": "assets",
+            "fonts": {
+              "path": "fonts"
+            },
+            "images": {
+              "path": "images"
+            },
+            "styles": {
+              "path": "styles"
+            }
+          },
+          "controller": {
+            "path": "controllers"
+          },
+          "decorator": {
+            "path": "decorators"
+          },
+          "directive": {
+            "path": "directives"
+          },
+          "factory": {
+            "path": "[service]"
+          },
+          "filter": {
+            "path": "filters"
+          },
+          "provider": {
+            "path": "[service]"
+          },
+          "service": {
+            "path": "services"
+          },
+          "test": {
+            "path": "tests"
+          },
+          "value": {
+            "path": "[service]"
+          },
+          "view": {
+            "path": "views"
+          }
+        }
+      },
+      "vendor": {
+        "path": "vendor"
+      }
+    }
+  }
+}

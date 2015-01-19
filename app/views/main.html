@@ -1,0 +1,36 @@
+<div class="comparison-container">
+  <h1>Compare Product</h3>
+  <div class="comparison-header">
+    <ul>
+      <li class="comparison-dropdown">
+        <select ng-model="selectedItem[0]" ng-options="item.name for item in data.items" data-options-disabled="item.isInUse for item in data.items">
+          <option value="">Select an item</option>
+        <select>
+      </li>
+      <li class="comparison-dropdown">
+        <select ng-model="selectedItem[1]" ng-options="item.name for item in data.items" data-options-disabled="item.isInUse for item in data.items">
+          <option value="">Select an item</option>
+        <select>
+      </li>
+      <li class="comparison-dropdown">
+        <select ng-model="selectedItem[2]" ng-options="item.name for item in data.items" data-options-disabled="item.isInUse for item in data.items">
+          <option value="">Select an item</option>
+        <select>
+      </li>
+    </ul>
+  </div>
+  <h3 ng-if="resultsAvailable()">Results</h3>
+  <div class="comparison-body">
+    <ul>
+      <li class="comparison-specs">
+        <specs-tab data-ng-model="selectedItem[0]">
+      </li>
+      <li class="comparison-specs">
+        <specs-tab data-ng-model="selectedItem[1]">
+      </li>
+      <li class="comparison-specs">
+        <specs-tab data-ng-model="selectedItem[2]">
+      </li>
+    </ul>
+  </div>
+<div>
