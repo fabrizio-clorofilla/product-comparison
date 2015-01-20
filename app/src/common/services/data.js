@@ -9,7 +9,7 @@ angular.module('comparisonToolApp')
 
 		var d = $q.defer();
 	  	// Retrieving the JSON with the tools' configuration
-	    $http.get('http://localhost:3000/config').
+	    $http.get('http://192.168.176.80:3000/config').
 		  success(function(data, status, headers, config) {
 		    // this callback will be called asynchronously
 		    // when the response is available

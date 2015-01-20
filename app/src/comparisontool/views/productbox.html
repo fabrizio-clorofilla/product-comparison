@@ -5,7 +5,7 @@
 		<select>
 	</div>
 	<div class="comparison-product-box-spacer"></div>
-	<div class="comparison-product-box-specs">
+	<div class="comparison-product-box-specs" ng-swipe-right="setActiveTab('prev')" ng-swipe-left="setActiveTab('next')">
 		<table ng-if="selectedItem">
 			<thead>
 				<tr>
@@ -15,7 +15,7 @@
 			<tbody>
 				<tr ng-repeat="(key, value) in selectedItem.specs">
 					<td>
-						<p><strong>{{getSpecName(key)}}</strong><p>
+						<p><strong>{{getSpecName(key)}}</strong></p>
 						<p>{{value}}</p>
 					</td>
 				</tr>
@@ -23,5 +23,8 @@
 				</tr>
 			</tbody>
 		</table>
+		<div ng-if="!selectedItem" class="comparison-product-box-message" ng-click="openDropdown()">
+			Select a product to start compairing
+		</div>
 	</div>
 </li>
