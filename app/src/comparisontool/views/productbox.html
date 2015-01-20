@@ -2,14 +2,14 @@
 	<div class="comparison-product-box-dropdown">
 		<select ng-model="selectedItem" ng-options="item.name for item in data.items" data-options-disabled="item.isInUse for item in data.items">
 		  <option value="">Select an item</option>
-		<select>
+		</select>
 	</div>
 	<div class="comparison-product-box-spacer"></div>
 	<div class="comparison-product-box-specs" ng-swipe-right="setActiveTab('prev')" ng-swipe-left="setActiveTab('next')">
 		<table ng-if="selectedItem">
 			<thead>
 				<tr>
-					<th class="comparison-product-title"><span class="arrow">< </span><span class="title">{{selectedItem.name}}</span><span class="arrow"> ></span></th>
+					<th class="comparison-product-title"><span class="arrow">&lt; </span><span class="title">{{selectedItem.name}}</span><span class="arrow"> &gt;</span></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -18,8 +18,6 @@
 						<p><strong>{{getSpecName(key)}}</strong></p>
 						<p>{{value}}</p>
 					</td>
-				</tr>
-					
 				</tr>
 			</tbody>
 		</table>

@@ -1,5 +1,8 @@
 'use strict';
 
+// This directive allows to enable/disable an option within a dropdown using boolean variables
+// In the Comparison Tool the boolean variable is in the 'model' for each product
+
 angular.module('comparisonToolApp')
 	.directive('optionsDisabled', function($parse) {
 	    var disableOptions = function(scope, attr, element, data, 

@@ -9,7 +9,7 @@ angular.module('comparisonToolApp')
 
 		var d = $q.defer();
 	  	// Retrieving the JSON with the tools' configuration
-	    $http.get('http://192.168.176.80:3000/config').
+	    $http.get('scripts/config.json').
 		  success(function(data, status, headers, config) {
 		    // this callback will be called asynchronously
 		    // when the response is available
@@ -21,7 +21,6 @@ angular.module('comparisonToolApp')
 		    console.log('Failed to load config JSON')
 		    d.reject(data);
 		  });
-
 		  return d.promise;
 	}
 

@@ -353,6 +353,29 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+    ngtemplates:  {
+      app:        {
+      src:      ['./**/views/**.html', './**/views/**/**.html'],
+      dest:     'app/src/common/app.templates.js',
+      options: {
+        prefix: '/',
+        module: 'comparisonToolApp',
+        url: function(url) {
+        return url.replace('./app/', ''); // fix for absolute path urls
+        },
+        htmlmin: {
+        collapseBooleanAttributes:      true,
+        collapseWhitespace:             true,
+        removeAttributeQuotes:          true,
+        removeComments:                 true,
+        removeEmptyAttributes:          true,
+        removeRedundantAttributes:      true,
+        removeScriptTypeAttributes:     true,
+        removeStyleLinkTypeAttributes:  true
+        }
+      }
+      }
     }
   });
 
@@ -393,6 +416,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     //'ngmin',
     'ngAnnotate',
+    'ngtemplates',
     'concat',
     'copy:dist',
     'cdnify',
