@@ -1,7 +1,7 @@
 <li class="comparison-product-box">
 	<div class="comparison-product-box-dropdown">
 		<select ng-model="selectedItem" ng-options="item.name for item in data.items" data-options-disabled="item.isInUse for item in data.items">
-		  <option value="">Select an item</option>
+			<option value="">Select an item</option>
 		</select>
 	</div>
 	<div class="comparison-product-box-spacer"></div>
@@ -9,13 +9,15 @@
 		<table ng-if="selectedItem">
 			<thead>
 				<tr>
-					<th class="comparison-product-title"><span class="arrow">&lt; </span><span class="title">{{selectedItem.name}}</span><span class="arrow"> &gt;</span></th>
+					<th class="comparison-product-title"><span class="arrow">&lt; </span><span class="title">{{selectedItem.name}}</span><span class="arrow"> &gt;</span>
+					</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="(key, value) in selectedItem.specs">
 					<td>
-						<p><strong>{{getSpecName(key)}}</strong></p>
+						<p><strong>{{getSpecName(key)}}</strong>
+						</p>
 						<p>{{value}}</p>
 					</td>
 				</tr>

@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('comparisonToolApp')
-  .controller('MainCtrl', function ($scope, DataService) {
+	.controller('MainCtrl', function($scope, DataService) {
 
-  });
+	});
