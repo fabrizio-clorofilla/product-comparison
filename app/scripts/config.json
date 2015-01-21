@@ -107,7 +107,7 @@
 			}
 		}, {
 			"id": 7,
-			"name": "Apple Macbook Pro Retina 13-inch (2013)",
+			"name": "Apple Macbook Pro Retina 15-inch (2013)",
 			"specs": {
 				"0": "£1338.39",
 				"1": "OSX 10.9",
@@ -228,7 +228,7 @@
 			}
 		}, {
 			"id": 7,
-			"name": "Apple Macbook Pro Retina 13-inch (2013)",
+			"name": "Apple Macbook Pro Retina 15-inch (2013)",
 			"specs": {
 				"0": "£1338.39",
 				"1": "OSX 10.9",
@@ -245,6 +245,37 @@
 	},
 	"specs": {
 		"laptops": [{
+			"id": 0,
+			"label": "Price"
+		}, {
+			"id": 1,
+			"label": "Operating system"
+		}, {
+			"id": 2,
+			"label": "Dimensions (mm)"
+		}, {
+			"id": 3,
+			"label": "Weight (kg)"
+		}, {
+			"id": 4,
+			"label": "Transport weight (kg)"
+		}, {
+			"id": 5,
+			"label": "Processor"
+		}, {
+			"id": 6,
+			"label": "Processor speed (GHz)"
+		}, {
+			"id": 7,
+			"label": "RAM (GB)"
+		}, {
+			"id": 8,
+			"label": "Type of storage"
+		}, {
+			"id": 9,
+			"label": "Storage capacity (GB)"
+		}],
+		"mobiles": [{
 			"id": 0,
 			"label": "Price"
 		}, {

@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         files: ['app/**/*.js'],
         tasks: ['newer:jshint:all'],
         options: {
-          livereload: false
+          livereload: true
         }
       },
       jsTest: {
@@ -41,17 +41,23 @@ module.exports = function (grunt) {
       },
       styles: {
         files: ['app/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        tasks: ['newer:copy:styles', 'autoprefixer'],
+        options: {
+          livereload: true
+        }
       },
       gruntfile: {
-        files: ['Gruntfile.js']
+        files: ['Gruntfile.js'],
+        options: {
+          livereload: true
+        }
       },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.app %>/**/*.html',
           '.tmp/styles/{,*/}*.css',
           'app/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]

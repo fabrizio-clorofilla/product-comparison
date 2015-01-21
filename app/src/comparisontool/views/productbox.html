@@ -9,7 +9,7 @@
 		<table ng-if="selectedItem">
 			<thead>
 				<tr>
-					<th class="comparison-product-title"><span class="arrow">&lt; </span><span class="title">{{selectedItem.name}}</span><span class="arrow"> &gt;</span>
+					<th class="comparison-product-title"><span class="arrow" ng-click="selectProduct('prev')">&lt; </span><span class="title">{{selectedItem.name}}</span><span class="arrow" ng-click="selectProduct('next')"> &gt;</span>
 					</th>
 				</tr>
 			</thead>

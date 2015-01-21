@@ -17,7 +17,8 @@ angular.module('comparisonToolApp')
 				}
 
 				$scope.data = {};
-				$scope.boxes = getURLParameter('boxes') || $attrs.boxes || 3;
+				var paramBoxes = parseInt(getURLParameter('boxes'));
+				$scope.boxes = (((paramBoxes < 6) && (paramBoxes > 1)) ? paramBoxes : 3) || $attrs.boxes || 3;
 
 				DataService
 					.initData()

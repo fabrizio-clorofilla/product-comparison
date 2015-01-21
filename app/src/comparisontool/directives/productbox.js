@@ -19,6 +19,48 @@ angular.module('comparisonToolApp')
           }
         }, true);
 
+        $scope.selectProduct = function(direction) {
+
+          var items = $scope.data.items;
+
+          if(direction == 'next'){
+            for (var i = 0; i < items.length - 1; i++) {
+              if (items[i].id == $scope.selectedItem.id) {
+                for(var j = i + 1; j < items.length; j++) {
+                  if(items[j].isInUse != true) {
+                    $scope.selectedItem = items[j];
+                    break;
+                  }
+                }
+                break;
+              }
+            }
+          }
+          if(direction == 'prev'){
+            for (var i = items.length - 1; i >= 1; i--) {
+              if (items[i].id == $scope.selectedItem.id) {
+                for(var j = i - 1; j >= 0; j--) {
+                  if(items[j].isInUse != true) {
+                    $scope.selectedItem = items[j];
+                    break;
+                  }
+                }
+                break;
+              }
+            }
+          }
+        }
+
+        $scope.$watch('selectedItem', function(newVal, oldVal) {
+          if (newVal != oldVal || newVal != undefined || newVal != null) {
+            // setting 'isInUse' to true to the product selected in the dropdown
+            // setting 'isInUse' to false to the product that's been swapped for the current selection
+            isInUseFnc(newVal, oldVal);
+            // setting the active tab to the current product
+            $scope.setActiveTab('this');
+          }
+        }, true);
+
         // Appending the 'select' button to the 'ul' tag above the product-box and binding its click event
         // to the dropdown
         var btnTag = $('<li>SELECT</li>');
@@ -65,10 +107,13 @@ angular.module('comparisonToolApp')
             // removing the swipe capabilities from the whole element
             $element.find('.comparison-product-box-specs').swipe("destroy");
             // setting the swipe event for the product title
-            // $element.find('.comparison-product-box-specs thead').swipe({
-            //   swipe:function(event, direction, distance, duration, fingerCount) {
-            //   $element.text('you swiped ' + direction);
-            //   },allowPageScroll:'vertical'});
+            $element.find('.comparison-product-box-specs thead').swipe({
+              swipe:function(event, direction, distance, duration, fingerCount) {
+              switch (direction) {
+                case 'left': $scope.selectProduct('next'); break;
+                case 'right': $scope.selectProduct('prev'); break;
+              }
+            },allowPageScroll:'vertical'});
             // setting the swipe event for the specification table
             $element.find('.comparison-product-box-specs tbody').swipe({
               swipe: function(event, direction, distance, duration, fingerCount) {

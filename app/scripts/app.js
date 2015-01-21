@@ -8,7 +8,7 @@ angular.module('comparisonToolApp', [
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/views/main.html',
+        templateUrl: '/src/common/views/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({
