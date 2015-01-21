@@ -5,12 +5,10 @@
 
 # DEMO URL
 http://tinyurl.com/prod-compare
+
 URL parameters available:
 - boxes (Integer)
 - category (String)
-
-# Git Repo creation
-- git init
 
 # Setting up project
 1.	Install all required libraries/components/modules
@@ -57,7 +55,7 @@ The generated js files include the HTML template cached into the Angular applica
 
 # Technical Specifications
 
-Being a single page application I've chosen to use Angular.js as framework to develop the Product Comparison Tool.
+Being the Product Comparison Tool a single page application I've chosen to use Angular.js as framework to develop the Product Comparison Tool.
 
 The generator-angulare-feature helped me to set up the project on my machine, creating folder structure, and javascript/css/html files.
 
