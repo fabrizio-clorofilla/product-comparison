@@ -9,7 +9,8 @@ angular.module('comparisonToolApp')
 		var init = function() {
 			var d = $q.defer();
 			// Retrieving the JSON with the tools' configuration
-			$http.get('scripts/config.json').
+			// API running on NodeJS/ExpressJS platform (check the 'server' folder)
+			$http.get('http://localhost:3000/config').
 			success(function(data, status, headers, config) {
 				// this callback will be called asynchronously
 				// when the response is available

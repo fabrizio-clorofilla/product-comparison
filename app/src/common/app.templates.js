@@ -7,7 +7,7 @@ angular.module('comparisonToolApp').run(['$templateCache', function($templateCac
 
 
   $templateCache.put('/src/comparisontool/views/comparisontool.html',
-    "<div class=comparison-container><h1>Compare Product</h1><ul class=comparison-select-button></ul><ul><data-product-box ng-repeat=\"box in range(boxes)\"></data-product-box></ul><h3 class=comparison-results>Results</h3></div>"
+    "<div class=comparison-container><h1>Compare Product</h1><ul class=comparison-select-button></ul><ul><data-product-box ng-repeat=\"box in range(boxes)\"></data-product-box></ul><h3 class=comparison-results>Results</h3><div class=comparison-message ng-if=isAnyProductSelected()>Select products to start comparing</div></div>"
   );
 
 
