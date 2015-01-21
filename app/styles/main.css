@@ -28,53 +28,53 @@
 	}
 
 	.comparison-container {
+		position: relative;
 		padding-left: 20px;
 		padding-right: 20px;
-		position: relative;
 	}
 
 	.comparison-container h1 {
-		padding-bottom: 10px;
 		border-bottom: 1px solid #eee;
+		padding-bottom: 10px;
 	}
 
 	.comparison-container h3 {
-		padding: 10px 0px;
+		position: absolute;
 		border-bottom: 1px solid #eee;
 		border-top: 1px solid #eee;
+		padding: 10px 0px;
 		font-size: 1.25em;
-		position: absolute;
-		width: calc(100% - 40px);
 		top: 74px;
+		width: calc(100% - 40px);
 	}
 
 	.comparison-product-box {
+		padding-right: 2%;
 		float: left;
 		display: inline-block;
-		padding-right: 2%;
 	}
 
 	.comparison-container ul {
-		padding: 0px;
 		margin: 16px 0px 16px 0px;
+		padding: 0px;
 		overflow: auto;
 		display: flex;
 	}
 
 	.comparison-container ul li {
-		display: inline;
 		padding-right: 2%;
+		display: inline;
 		flex: 1 1 12.5%;
 	}
 
 	.comparison-container ul li:last-child {
-		float: right;
 		padding-right: 0;
+		float: right;
 	}
 
 	.comparison-product-box select {
-		width: 100%;
 		padding: 5px 12px;
+		width: 100%;
 	}
 
 	.comparison-product-box-spacer {
@@ -86,10 +86,10 @@
 	}
 
 	.comparison-product-box-specs table td {
+		border: 1px solid #eee;
 		padding: 12px 12px;
 		font-size: 1.15em;
 		line-height: 1.25em;
-		border: 1px solid #eee;
 	}
 
 	.comparison-product-box-specs table td p {
@@ -97,19 +97,19 @@
 	}
 
 	.comparison-product-box-specs table th {
+		background-color: #fff;
 		padding: 0;
 		vertical-align: middle;
 		height: 56px;
-		background-color: #fff;
 	}
 
 	.comparison-product-title span.title {
-		padding: 12px;
 		background-color: #FFF;
+		padding: 12px;
 		text-align: center;
-		display: block;
 		font-size: 1.25em;
 		line-height: 1.15em;
+		display: block;
 	}
 
 	.comparison-product-title span.arrow {
@@ -156,16 +156,16 @@
 	}
 
 	.comparison-container h1 {
-		padding: 10px 0px 15px 0px;
+		z-index: 9;
+		margin-top: 0px;
 		border-bottom: 1px solid #eee;
+		background-color: #fff;
+		padding: 10px 0px 15px 0px;
 		text-align: center;
-		position: fixed;
-		width: 100%;
 		top: 0px;
 		left: 0px;
-		margin-top: 0px;
-		z-index: 9;
-		background-color: #fff;
+		width: 100%;
+		position: fixed;
 	}
 
 	.comparison-container h3 {
@@ -174,19 +174,19 @@
 
 	.comparison-product-box {
 		float: left;
-		display: inline-block;
-		position: absolute;
 		top: 60px;
 		left: 0;
 		width: 100%;
+		display: inline-block;
+		position: absolute;
 	}
 
 	.comparison-container ul {
-		padding: 0px;
 		margin: 16px 0px 16px 0px;
+		padding: 0px;
+		width: 100%;
 		overflow: auto;
 		display: flex;
-		width: 100%;
 	}
 
 	.comparison-container ul li {
@@ -195,11 +195,11 @@
 	}
 
 	.comparison-product-box select {
-		width: 100%;
 		padding: 5px 12px;
 		font-size: 1.25em;
-		position: absolute;
 		top: -100px;
+		width: 100%;
+		position: absolute;
 	}
 
 	.comparison-product-box-spacer {
@@ -211,10 +211,10 @@
 	}
 
 	.comparison-product-box-specs table td {
+		border: 1px solid #eee;
 		padding: 12px 12px;
 		font-size: 1em;
 		line-height: 1.15em;
-		border: 1px solid #eee;
 	}
 
 	.comparison-product-box-specs table td p {
@@ -222,9 +222,9 @@
 	}
 
 	.comparison-product-title {
+		background-color: #fff;
 		padding: 16px 12px 16px 12px;
 		font-size: 1.15em;
-		background-color: #fff;
 		line-height: 1.5em;
 		text-align: center;
 		height: 16px;
@@ -249,19 +249,19 @@
 
 	.comparison-select-button {
 		z-index: 999;
-		position: fixed;
-		top: 34px;
 		background-color: #ddd;
 		padding: 15px;
+		top: 34px;
 		left: 0;
+		position: fixed;
 	}
 
 	.comparison-select-button li {
+		border-right: 1px solid #ccc;
 		padding: 0px 15px;
 		line-height: 3.25em;
 		font-size: 1.25em;
 		text-align: center;
-		border-right: 1px solid #ccc;
 	}
 
 	.comparison-select-button li.active {
@@ -273,13 +273,13 @@
 	}
 
 	.comparison-product-box-message {
-		text-align: center;
 		margin: 100px 40px 150px 40px;
-		line-height: 4em;
+		background-color: #f9f9f9;
 		color: #ccc;
+		text-align: center;
+		line-height: 4em;
 		font-size: 1.25em;
 		font-weight: 300;
-		background-color: #f9f9f9;
 	}
 
 	.comparison-product-box-specs {
