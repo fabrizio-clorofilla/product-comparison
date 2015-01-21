@@ -132,6 +132,16 @@
   .comparison-product-box-message {
     display: none;
   }
+
+  .comparison-message {
+    margin: 100px 15% 0 15%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    color: #ccc;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
 }
 
 /* Responsive: Mobiles (iPhone 6 Plus and Previous) */
@@ -287,6 +297,10 @@
     line-height: 4em;
     font-size: 1.25em;
     font-weight: 300;
+  }
+
+  .comparison-message {
+    display: none;
   }
 
   .comparison-product-box-specs {

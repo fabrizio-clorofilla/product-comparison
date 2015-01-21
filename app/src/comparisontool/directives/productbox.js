@@ -3,7 +3,7 @@
 // This is the main directive for the Comparison Tool
 
 angular.module('comparisonToolApp')
-  .directive('productBox', function() {
+  .directive('productBox', function(DataService) {
     return {
       templateUrl: '/src/comparisontool/views/productbox.html',
       restrict: 'E',
@@ -13,6 +13,7 @@ angular.module('comparisonToolApp')
       replace: true,
       link: function($scope, $element, $attrs) {
 
+        DataService.registerProductBox($scope.id);
         // This function watches changes to accur to $scope.selectItem
         // (its value changes when the user makes a selection from the dropdown
         // (on both mobile and desktop version or when the user clicks the arrows before and
@@ -22,6 +23,8 @@ angular.module('comparisonToolApp')
             // Setting 'isInUse' to true to the product selected in the dropdown
             // Setting 'isInUse' to false to the product that's been swapped for the current selection
             isInUseFnc(newVal, oldVal);
+            // Registering the new value in the DataService
+            DataService.registerProductBox($scope.id, newVal);
             // Setting the active tab to the current product
             $scope.setActiveTab('this');
           }
@@ -74,14 +77,6 @@ angular.module('comparisonToolApp')
             }
           }
         }
-
-        // Appending the 'select' button (mobile version) to the 'ul' tag above the product-box
-        // and binding its click event to the dropdown
-        var btnTag = $('<li>SELECT</li>');
-        $(btnTag).click(function() {
-          $scope.openDropdown();
-        });
-        $(btnTag).appendTo($element.parent().prev());
 
         // This function is used by the select button (mobile version) to open the relative dropdown
         $scope.openDropdown = function() {
@@ -189,6 +184,14 @@ angular.module('comparisonToolApp')
             elem[0].fireEvent("onmousedown");
           }
         }
+
+        // Appending the 'select' button (mobile version) to the 'ul' tag above the product-box
+        // and binding its click event to the dropdown
+        var btnTag = $('<li>SELECT</li>');
+        $(btnTag).click(function() {
+          $scope.openDropdown();
+        });
+        $(btnTag).appendTo($element.parent().prev());
 
         // Attaching swipe capabilities to the message div (mobile version)
         setSwipeEvents(false)

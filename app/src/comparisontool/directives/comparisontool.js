@@ -27,6 +27,10 @@ angular.module('comparisonToolApp')
 					return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null
 				}
 
+				// Assigning the DataService function 'isAnyProductSelected' to a scope variable
+				// used to hide the initial message
+				$scope.isAnyProductSelected = DataService.isAnyProductSelected;
+
 				// Initializing the scope variable 'data'
 				$scope.data = {};
 
