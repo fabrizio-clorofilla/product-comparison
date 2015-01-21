@@ -1,5 +1,6 @@
 'use strict';
 
+// This is the Angular Application
 angular.module('comparisonToolApp', [
     'ngResource',
     'ngSanitize',
